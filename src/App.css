@@ -1,0 +1,17 @@
+
+
+#root {
+  
+}
+
+.col-16 { width: 55rem; } /* 880px */
+.col-14 { width: 45.9375rem; } /* 735px */
+.col-12 { width: 41.25rem; } /* 660px */
+.col-10 { width: 34.375rem; } /* 550px */
+.col-8 { width: 27.5rem; } /* 440px */
+.col-6 { width: 20.625rem; } /* 330px */
+.col-4 { width: 13.75rem; } /* 220px */
+.col-3 { width: 10.3125rem; } /* 165px */
+.col-2 { width: 6.875rem; } /* 110px */
+.col-1 { width: 3.4375rem; } /* 55px */
+
