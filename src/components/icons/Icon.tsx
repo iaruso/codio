@@ -1,17 +1,17 @@
 import React, { lazy, Suspense, ComponentType } from 'react';
 
 interface IconProps {
-  name: string;
+  path: string;
   className?: string;
 }
 
-const Icon: React.FC<IconProps> = ({ name, className }) => {
+const Icon: React.FC<IconProps> = ({ path, className }) => {
   const IconComponent = lazy<ComponentType<{ className?: string }>>(() =>
-    import(`../../components/icons/${name}`).then(module => ({ default: module.default }))
+    import(`../../components/icons/${path}`).then(module => ({ default: module.default }))
   );
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div></div>}>
       <IconComponent className={className} />
     </Suspense>
   );

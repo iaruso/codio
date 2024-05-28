@@ -3,9 +3,11 @@
   justify-content: center;
   align-items: center;
   border-bottom: dashed var(--border-width) var(--border-color);
-  height: 2rem;
-  position: relative;
+  height: calc(3.4375rem / 2);
+  position: sticky;
   z-index: 4;
+  top: 0;
+  background-color: white;
 }
 
 nav {
@@ -15,7 +17,7 @@ nav {
   width: 100%;
   border-left: dashed var(--border-width) var(--border-color);
   border-right: dashed var(--border-width) var(--border-color);
-  height: inherit;
+  height: calc(3.4375rem / 2 - var(--border-width));
 }
 
 .home-link {
@@ -26,11 +28,11 @@ nav {
 }
 
 .home-link > svg {
-  height: var(--font-size-lg);
+  height: var(--font-size-xl);
   display: flex;
   align-items: center;
   justify-content: start;
-  fill: var(--dark-100);
+  fill: var(--dark-200);
 }
 
 nav > ul {
@@ -61,10 +63,20 @@ nav > ul > li > a {
   color: var(--dark-200);
   text-decoration: none;
   font-size: var(--font-size-sm);
+  font-weight: 500;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav > ul > li > a:hover {
+  background-color: var(--light-100);
 }
 
 nav > ul > li > a.cta {
   background-color: var(--dark-200);
   color: white;
+}
+
+nav > ul > li > a.cta:hover {
+  background-color: var(--dark-300);
 }
