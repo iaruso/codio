@@ -25,6 +25,12 @@ nav {
   display: flex;
   align-items: center;
   padding: 0 0 0 0.5rem;
+  background-color: var(--light-0);
+  transition: background-color 0.3s ease;
+}
+
+.home-link:hover {
+  background-color: var(--light-100);
 }
 
 .home-link > svg {

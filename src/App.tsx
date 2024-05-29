@@ -3,6 +3,8 @@ import Navbar from './components/navbar/Navbar'
 import Intro from './components/intro/Intro'
 import Companies from './components/companies/Companies'
 import Work from './components/work/Work'
+import Services from './components/services/Services'
+import Team from './components/team/Team'
 
 function App() {
 
@@ -12,6 +14,8 @@ function App() {
       <Intro />
       <Companies />
       <Work />
+      <Services />
+      <Team />
     </>
   )
 }

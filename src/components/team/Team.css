@@ -1,0 +1,36 @@
+.team-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  border-bottom: dashed var(--border-width) var(--border-color);
+}
+
+.team-content {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  border-right: dashed var(--border-width) var(--border-color);
+  border-left: dashed var(--border-width) var(--border-color);
+}
+
+.team-content-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 6.875rem;
+  border-bottom: dashed var(--border-width) var(--border-color);
+}
+
+.team-content-header h2 {
+  font-size: 1.5rem;
+  font-family: 'GilmerBold', sans-serif;
+  letter-spacing: -0.066rem;
+  color: var(--dark-200);
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+  font-weight: 600;
+}

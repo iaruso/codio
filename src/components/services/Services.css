@@ -1,0 +1,134 @@
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  border-bottom: dashed var(--border-width) var(--border-color);
+}
+
+.services-content {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  border-right: dashed var(--border-width) var(--border-color);
+  border-left: dashed var(--border-width) var(--border-color);
+}
+
+.services-content-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 6.875rem;
+  border-bottom: dashed var(--border-width) var(--border-color);
+}
+
+.services-content-header h2 {
+  font-size: 1.5rem;
+  font-family: 'GilmerBold', sans-serif;
+  letter-spacing: -0.066rem;
+  color: var(--dark-200);
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+  font-weight: 600;
+}
+
+.services-content-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+}
+
+.services-content-area-grid-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: dashed var(--border-width) var(--border-color);
+  border-right: dashed var(--border-width) var(--border-color);
+}
+
+.services-content-area-grid-options-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(3.4375rem /2);
+  border: none;
+  border-right: dashed var(--border-width) var(--border-color);
+  background-color: var(--light-0);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--dark-200);
+  font-family: 'Radio Canada Big', sans-serif;
+}
+
+.services-content-area-grid-options-item:last-child {
+  border-right: none;
+}
+
+.services-content-area-grid {
+  border-top: dashed var(--border-width) var(--border-color);
+  display: flex;
+  align-items: center;
+}
+
+.services-content-area-grid > div {
+  height: 100%;
+}
+
+.services-content-area-grid-container {
+  border-left: dashed var(--border-width) var(--border-color);
+  border-right: dashed var(--border-width) var(--border-color);
+}
+
+.services-content-area-grid-container-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  min-height: 3.4375rem;
+  border-bottom: dashed var(--border-width) var(--border-color);
+}
+
+.services-content-area-grid-container-description p {
+  font-size: var(--font-size-sm);
+  color: var(--dark-300);
+  margin: 0;
+  font-weight: 500;
+}
+
+.services-content-area-grid-container-canvas {
+  height: calc(17.1875rem - 2px);
+  position: relative;
+}
+
+.services-content-area-grid-container-canvas .bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-position: 0px 0px, 0% 0%;
+  background-size: 3.4375rem, 3.4375rem;
+  background-attachment: scroll, fixed;
+  background-color: var(--dark-1000); 
+  background-image: url('./grid_pattern.png');
+  z-index: 1;
+  box-shadow: inset 0 0 0 0 var(--light-0);
+  animation: reveal 2s ease-in-out;
+}
+
+@keyframes reveal {
+  0% {
+    z-index: 2;
+    box-shadow: inset 0 0 10rem 8rem var(--light-0);
+  }
+  100% {
+    z-index: 2;
+    box-shadow: inset 0 0 0 0 var(--light-0);
+  }
+}

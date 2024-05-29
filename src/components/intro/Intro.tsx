@@ -3,7 +3,7 @@ import React from 'react';
 
 const Intro: React.FC = () => {
   return (
-    <div className='intro-container'>
+    <section className='intro-container'>
       <main className='col-16'>
         <div className='empty-block col-2'></div>
         <div className='empty-block col-2'></div>
@@ -24,7 +24,7 @@ const Intro: React.FC = () => {
         <div className='empty-block col-2'></div>
         <div className='empty-block col-2'></div>
       </main>
-    </div>
+    </section>
   );
 };
 

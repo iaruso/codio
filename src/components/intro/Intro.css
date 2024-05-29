@@ -63,7 +63,7 @@
 
 .button-area {
   position: absolute;
-  bottom: 2em;
+  bottom: 3em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
@@ -121,9 +121,14 @@
   background-color: var(--light-100);
 }
 
+.intro-content .cta:hover ~ .button-area-overlay {
+  box-shadow: inset 0 0 1.25rem 1.25rem var(--light-0);
+}
+
 .button-area-overlay {
   position: absolute;
   z-index: 1;
   inset: 0;
-  box-shadow: inset 0 0 1.25rem 0.875rem var(--light-0);
+  box-shadow: inset 0 0 1.25rem 0.75rem var(--light-0);
+  transition: box-shadow 0.3s ease;
 }
