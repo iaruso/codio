@@ -34,3 +34,189 @@
   text-align: center;
   font-weight: 600;
 }
+
+.team-content-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(10.3125rem * (4 / 3));
+}
+
+.team-prev-btn, .team-next-btn {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: var(--dark-400);
+  font-size: var(--font-size-xs);
+  font-family: 'Radio Canada Big', 'Roboto', sans-serif;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.team-prev-btn {
+  justify-content: end;
+  border-right: dashed var(--border-width) var(--border-color);
+}
+
+.team-next-btn {
+  justify-content: start;
+  border-left: dashed var(--border-width) var(--border-color);
+}
+
+.team-prev-btn button, .team-next-btn button {
+  background-color: var(--light-0);
+  height: calc(3.4375rem / 2);
+  width: calc(3.4375rem / 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: dashed var(--border-width) var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.team-prev-btn button svg, .team-next-btn button svg {
+  width: 0.33rem;
+  fill: var(--dark-400);
+}
+
+.team-prev-btn button:hover, .team-next-btn button:hover {
+  background-color: var(--light-100);
+}
+
+.team-prev-btn button {
+  border-right: none;
+}
+
+.team-next-btn button {
+  border-left: none;
+}
+
+.team-members-container {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.team-members {
+  display: flex;
+  position: relative;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+
+.team-members-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(10.3125rem * (4 / 3));
+  aspect-ratio: 4/3;
+  transition: margin 0.6s ease;
+  z-index: 1;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.team-members-item:nth-child(2), .team-members-item:nth-child(3), .team-members-item:nth-child(4), .team-members-item:nth-child(5) {
+  border-left: dashed var(--border-width) var(--border-color);
+}
+
+.team-members.sliding-left .team-members-item:nth-child(2) {
+  animation: borderAnimation 0.6s ease;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-left-width: 0;
+  }
+  99% {
+    border-left-width: 0;
+  }
+  100% {
+    border-left-width: var(--border-width);
+  }
+}
+
+.team-members-item-image, .team-members-item-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.team-members-item-image img {
+  filter: grayscale(1);
+  transition: filter 0.3s ease;
+}
+
+.team-members-item:hover .team-members-item-image img {
+  filter: grayscale(0);
+}
+
+.team-members-item-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--light-0);
+  border-top: dashed var(--border-width) var(--border-color);
+  transition: background-color 0.3 ease;
+}
+
+.team-members-item:hover .team-members-item-info {
+  background-color: var(--light-100);
+}
+
+.team-members-item-info h3 {
+  font-size: var(--font-size-sm);
+  color: var(--dark-300);
+  margin: 0;
+  font-weight: 600;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  font-family: 'GilmerBold', sans-serif;
+}
+
+.team-members-item-info p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0.125rem 0.5rem;
+  color: var(--dark-400);
+  font-size: var(--font-size-sm);
+}
+
+.team-careers-area {
+  display: flex;
+  justify-content: center;
+  border-top: dashed var(--border-width) var(--border-color);
+  height: 3.4375rem;
+}
+
+.team-careers-area .empty-block {
+  height: 100%;
+}
+
+.team-careers-area .empty-block:first-child {
+  border-right: dashed var(--border-width) var(--border-color);
+}
+
+.team-careers-area .empty-block:last-child {
+  border-left: dashed var(--border-width) var(--border-color);
+}
+
+.team-careers-area p {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--dark-300);
+  margin: 0;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

@@ -62,7 +62,7 @@
   font-size: var(--font-size-sm);
   font-weight: 500;
   color: var(--dark-200);
-  font-family: 'Radio Canada Big', sans-serif;
+  font-family: 'Radio Canada Big', 'Roboto', sans-serif;
 }
 
 .services-content-area-grid-options-item:last-child {

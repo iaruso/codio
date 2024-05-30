@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Radio Canada Big', sans-serif;
+  font-family: 'Radio Canada Big', 'Roboto', sans-serif;
   font-optical-sizing: auto;
   font-size: calc(16px + (24 - 16) * (100vw - 1080px) / (1920 - 1080));
   font-synthesis: none;

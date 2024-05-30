@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "team.members.nikolai",
+    "position": "team.positions.ceo",
+    "image": "nikolai",
+    "ref": "https://www.pexels.com/photo/business-man-in-black-turtleneck-sweater-5439427/"
+  },
+  {
+    "id": 2,
+    "name": "team.members.olena",
+    "position": "team.positions.manager",
+    "image": "olena",
+    "ref": "https://www.pexels.com/photo/confident-businesswoman-4342352/"
+  },
+  {
+    "id": 3,
+    "name": "team.members.ravi",
+    "position": "team.positions.fullstack",
+    "image": "ravi",
+    "ref": "https://www.pexels.com/photo/man-wearing-blue-crew-neck-t-shirt-2379005/"
+  },
+  {
+    "id": 4,
+    "name": "team.members.sofia",
+    "position": "team.positions.designer",
+    "image": "sofia",
+    "ref": "https://www.pexels.com/photo/photo-of-woman-wearing-yellow-beanie-2119500/"
+  },
+  {
+    "id": 5,
+    "name": "team.members.liam",
+    "position": "team.positions.backend",
+    "image": "liam",
+    "ref": "https://www.pexels.com/photo/photography-of-a-man-carrying-bag-1071812/"
+  },
+  {
+    "id": 6,
+    "name": "team.members.malik",
+    "position": "team.positions.creative_developer",
+    "image": "malik",
+    "ref": "https://www.pexels.com/photo/man-in-red-jacket-1681010/"
+  }
+]

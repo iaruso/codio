@@ -1,12 +1,18 @@
 .navbar-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  height: fit-content;
   border-bottom: dashed var(--border-width) var(--border-color);
-  height: calc(3.4375rem / 2);
   position: sticky;
   z-index: 4;
   top: 0;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(3.4375rem / 2);
   background-color: white;
 }
 
@@ -17,7 +23,7 @@ nav {
   width: 100%;
   border-left: dashed var(--border-width) var(--border-color);
   border-right: dashed var(--border-width) var(--border-color);
-  height: calc(3.4375rem / 2 - var(--border-width));
+  height: 100%;
 }
 
 .home-link {

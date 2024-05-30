@@ -1,0 +1,139 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  height: calc(3.4375rem / 2);
+  border-left: dashed var(--border-width) var(--border-color);
+  border-right: dashed var(--border-width) var(--border-color);
+}
+
+.footer-container p {
+  font-size: var(--font-size-xs);
+  color: var(--dark-400);
+  margin: 0;
+  flex: 1;
+  margin-right: calc(3.4375rem/2);
+  text-align: center;
+}
+
+.footer-container > div:first-child {
+  width: 6.875rem;
+  height: 100%;
+}
+
+.language-select {
+  height: 100%;
+  border: none !important;
+  border-right: dashed var(--border-width) var(--border-color) !important;
+  min-height: unset !important;
+  padding: 0.25rem 0.5rem !important;
+  background-color: var(--light-0) !important;
+  transition: background-color 0.3s ease !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.language-select:hover, .language-select:focus, .language-select:focus-within, .language-select:focus-visible {
+  background-color: var(--light-100) !important;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: calc(3.4375rem/2);
+  text-decoration: none;
+  border: none;
+  border-right: dashed var(--border-width) var(--border-color);
+  cursor: pointer;
+  background-color: var(--light-0);
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--light-100);
+}
+
+.theme-toggle svg {
+  width: 0.75rem;
+  fill: var(--dark-400);
+}
+
+.footer-social {
+  display: flex;
+  align-self: end;
+  height: 100%;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: calc(3.4375rem/2);
+  text-decoration: none;
+  border-left: dashed var(--border-width) var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-social a:hover {
+  background-color: var(--light-100);
+}
+
+.footer-social a svg {
+  width: 0.75rem;
+  fill: var(--dark-400);
+}
+
+/* React Select Dropdown */
+.react-dropdown-select-content {
+  font-size: var(--font-size-sm);
+  font-family: 'Radio Canada Big', 'Roboto', sans-serif;
+  color: var(--dark-200);
+  font-weight: 500;
+}
+
+.react-dropdown-select-dropdown {
+  bottom: calc(3.4375rem / 2 + var(--border-width)) !important;
+  border: none !important;
+  left: 0 !important;
+  width: calc(6.875rem - 2 * var(--border-width)) !important;
+  border-radius: 0 !important;
+  background-color: var(--light-0) !important;
+  box-shadow: none !important;
+  max-height: 6.875rem !important;
+  height: calc(6.875rem - var(--border-width)) !important;
+}
+
+.react-dropdown-select-item {
+  min-height: calc(3.4375rem / 2) !important;
+  color: var(--dark-200) !important;
+  font-size: var(--font-size-sm) !important;
+  font-family: 'Radio Canada Big', 'Roboto', sans-serif !important;
+  font-weight: 500 !important;
+  padding: 0.25rem 0.5rem !important;
+  border-bottom: dashed var(--border-width) var(--border-color) !important;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.react-dropdown-select-item:last-child {
+  border-bottom: none !important;
+}
+
+.react-dropdown-select-item:hover, .react-dropdown-select-item:focus, .react-dropdown-select-item:focus-within, .react-dropdown-select-item:focus-visible {
+  background-color: var(--light-100) !important;
+}
+
+.react-dropdown-select-item-selected {
+  background-color: var(--light-400) !important;
+}

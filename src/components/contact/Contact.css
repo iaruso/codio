@@ -1,0 +1,73 @@
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  border-bottom: dashed var(--border-width) var(--border-color);
+}
+
+.contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6.875rem;
+  border-left: dashed var(--border-width) var(--border-color);
+  border-right: dashed var(--border-width) var(--border-color);
+}
+
+.contact-content .empty-block {
+  height: 100%;
+}
+
+.contact-content .empty-block:first-child {
+  border-right: dashed var(--border-width) var(--border-color);
+}
+
+.contact-content .empty-block:last-child {
+  border-left: dashed var(--border-width) var(--border-color);
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  height: 100%;
+  background-color: var(--light-0);
+  padding: 0rem 1rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  background-color: var(--light-100);
+}
+
+.contact-link:hover p{
+  scale: 1.05;
+}
+
+.contact-link h2 {
+  font-size: 1.5rem;
+  font-family: 'GilmerBold', sans-serif;
+  letter-spacing: -0.066rem;
+  color: var(--dark-200);
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+  font-weight: 600;
+}
+
+.contact-link p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: var(--dark-400);
+  font-size: var(--font-size-md);
+  font-family: 'Radio Canada Big', sans-serif;
+  border: none;
+  text-decoration: none;
+  transition: scale 0.3s ease;
+}
