@@ -25,6 +25,18 @@ export default {
     },
     services: {
       title: 'Nos services',
+      design: {
+        title: 'Conception',
+        content: 'Concevoir des expériences en ligne percutantes qui résonnent auprès de votre public'
+      },
+      development: {
+        title: 'Développement',
+        content: 'Développement transparent pour donner vie à votre vision.'
+      },
+      seo: {
+        title: 'SEO',
+        content: "Débloquer la croissance organique grâce à l'optimisation stratégique du référencement naturel."
+      }
     },
     team: {
       title: 'Notre équipe',
@@ -44,7 +56,7 @@ export default {
         backend: 'Développeur Backend',
         creative_developer: 'Développeur Créatif'
       },
-      hiring: 'Nous ne recrutons pas actuellement, mais nous serions ravis d\'avoir de vos nouvelles pour de futures opportunités.',
+      hiring: 'Nous ne recrutons pas pour le moment, mais nous sommes toujours à la recherche de personnes talentueuses pour rejoindre notre équipe.',
     },
     contact: {
       title: 'Nous contacter',

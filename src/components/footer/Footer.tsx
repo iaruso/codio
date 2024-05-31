@@ -1,10 +1,16 @@
 import './Footer.css';
 import React, { useState, useEffect } from 'react';
 import Select from 'react-dropdown-select';
+import gsap from 'gsap';
 import { useTranslation } from 'react-i18next';
 import Icon from '../icons/Icon';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  toggleTheme: () => void;
+  theme: string;
+}
+
+const Footer: React.FC<FooterProps> = ({toggleTheme, theme}) => {
   const { t, i18n } = useTranslation();
   const [activeLanguage, setActiveLanguage] = useState(i18n.language.split('-')[0]);
 
@@ -26,8 +32,22 @@ const Footer: React.FC = () => {
   const handleSelectChange = (selectedOptions: { value: string; }[]) => {
     const selectedLanguage = selectedOptions[0].value;
     setActiveLanguage(selectedLanguage);
-    i18n.changeLanguage(languages[selectedLanguage]);
+    setTimeout(() => {
+    i18n.changeLanguage(languages[selectedLanguage]); }
+    , 30);
   };
+
+  useEffect(() => {
+    const rootElement = document.getElementById('root');
+    if (rootElement) {
+      rootElement.className = theme;
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  useEffect(() => {
+    gsap.fromTo('.opacity-box', { opacity: 2}, { opacity: 0, duration: 2 }); /* Lags a bit, so opacity must be over 1 */
+  }, [i18n.language, theme]);
 
   return (
     <footer>
@@ -49,8 +69,8 @@ const Footer: React.FC = () => {
           searchable={false}
           onChange={handleSelectChange}
         />
-        <button className='theme-toggle'>
-          <Icon path='Light' />
+        <button className='theme-toggle' onClick={toggleTheme}>
+          {theme === 'dark' ? <Icon path='Dark' /> : <Icon path='Light' />}
         </button>
         <p>{t('footer.content')}</p>
         <div className='footer-social'>

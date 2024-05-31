@@ -7,7 +7,7 @@
   position: sticky;
   z-index: 5;
   top: 0;
-  background-color: var(--light-100);
+  background-color: var(--banner-bg-color);
 }
 
 .banner-content {
@@ -22,13 +22,13 @@
 .banner-content p {
   padding-left: 0.5rem;
   font-size: var(--font-size-xs);
-  color: var(--dark-400);
+  color: var(--detail-color);
 }
 
 .banner-content button {
-  background-color: var(--light-100);
+  background-color: var(--banner-button-bg-color);
   height: calc(100% - var(--border-width));
-  color: var(--dark-400);
+  color: var(--detail-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,9 +43,9 @@
 
 .banner-content button svg {
   width: 0.66rem;
-  fill: var(--dark-400);
+  fill: var(--banner-icon-color);
 }
 
 .banner-content button:hover {
-  background-color: var(--light-400);
+  background-color: var(--banner-button-hover-bg-color);
 }

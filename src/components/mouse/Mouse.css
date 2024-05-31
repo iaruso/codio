@@ -1,0 +1,19 @@
+.mouse-area {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.mouse-area .vertical {
+  position: absolute;
+  height: 100dvh;
+  left: calc(50% - var(--border-width));
+  border-left: dashed var(--border-width) var(--border-color);
+}
+
+.mouse-area .horizontal {
+  position: absolute;
+  width: 100dvw;
+  top: calc(50% - var(--border-width));
+  border-top: dashed var(--border-width) var(--border-color);
+}

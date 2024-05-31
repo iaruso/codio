@@ -1,10 +1,38 @@
 .contact-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: fit-content;
   border-bottom: dashed var(--border-width) var(--border-color);
+}
+
+.contact-container .empty-block.horizontal {
+  height: 3.4375rem;
+  border-right: dashed var(--border-width) var(--border-color);
+  border-left: dashed var(--border-width) var(--border-color);
+  display: flex;
+}
+
+.contact-container .empty-block.horizontal:first-child {
+  border-bottom: dashed var(--border-width) var(--border-color);
+}
+
+.contact-container .empty-block.horizontal:last-child {
+  border-top: dashed var(--border-width) var(--border-color);
+}
+
+.contact-container .empty-block.horizontal .empty-block {
+  height: 100%;
+}
+
+.contact-container .empty-block.horizontal .empty-block:first-child {
+  border-right: dashed var(--border-width) var(--border-color);
+}
+
+.contact-container .empty-block.horizontal .empty-block:last-child {
+  border-left: dashed var(--border-width) var(--border-color);
 }
 
 .contact-content {
@@ -35,14 +63,14 @@
   justify-content: center;
   gap: 0.25rem;
   height: 100%;
-  background-color: var(--light-0);
+  background-color: var(--button-bg-color);
   padding: 0rem 1rem;
   transition: background-color 0.3s ease;
   text-decoration: none;
 }
 
 .contact-link:hover {
-  background-color: var(--light-100);
+  background-color: var(--button-hover-bg-color);
 }
 
 .contact-link:hover p{
@@ -53,7 +81,7 @@
   font-size: 1.5rem;
   font-family: 'GilmerBold', sans-serif;
   letter-spacing: -0.066rem;
-  color: var(--dark-200);
+  color: var(--text-color);
   margin: 0;
   line-height: 1;
   text-align: center;
@@ -64,7 +92,7 @@
   display: flex;
   align-items: center;
   margin: 0;
-  color: var(--dark-400);
+  color: var(--detail-color);
   font-size: var(--font-size-md);
   font-family: 'Radio Canada Big', sans-serif;
   border: none;

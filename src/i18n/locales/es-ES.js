@@ -25,6 +25,18 @@ export default {
     },
     services: {
       title: 'Nuestros servicios',
+      design: {
+        title: 'Diseño',
+        content: 'Diseñando experiencias online impactantes que resuenen con tu audiencia'
+      },
+      development: {
+        title: 'Desarrollo',
+        content: 'Desarrollo fluido para dar vida a tu visión.'
+      },
+      seo: {
+        title: 'SEO',
+        content: 'Desbloqueando el crecimiento orgánico a través de la optimización estratégica de SEO.'
+      }
     },
     team: {
       title: 'Nuestro equipo',
@@ -44,7 +56,7 @@ export default {
         backend: 'Desarrollador Backend',
         creative_developer: 'Desarrollador Creativo'
       },
-      hiring: 'Actualmente no estamos contratando, pero nos encantaría saber de ti para futuras oportunidades.',
+      hiring: 'En este momento no estamos contratando, pero siempre estamos buscando personas con talento para unirse a nuestro equipo.',
     },
     contact: {
       title: 'Ponerse en contacto',

@@ -25,9 +25,21 @@ export default {
     },
     services: {
       title: 'Nossos serviços',
+      design: {
+        title: 'Design',
+        content: 'Criando experiências online impactantes que cativam o seu público'
+      },
+      development: {
+        title: 'Desenvolvimento',
+        content: 'Desenvolvimento perfeito para dar vida à sua visão.'
+      },
+      seo: {
+        title: 'SEO',
+        content: 'Desbloqueando o crescimento orgânico por meio de otimização estratégica de SEO.'
+      }
     },
     team: {
-      title: 'Nossa equipe',
+      title: 'Nossa equipa',
       members: {
         nikolai: 'Nikolai Petrov',
         olena: 'Olena Kovalenko',
@@ -44,7 +56,7 @@ export default {
         backend: 'Desenvolvedor Backend',
         creative_developer: 'Desenvolvedor Criativo'
       },
-      hiring: "Atualmente não estamos a contratar, mas gostaríamos ouvir de si para futuras oportunidades.",
+      hiring: "Neste momento não temos vagas abertas, mas estamos sempre à procura de talentos para se juntarem à nossa equipa.",
     },
     contact: {
       title: 'Entrar em contacto'

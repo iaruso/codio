@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: center;
   height: calc(3.4375rem / 2);
-  background-color: white;
+  background-color: var(--bg-color);
 }
 
 nav {
@@ -31,12 +31,11 @@ nav {
   display: flex;
   align-items: center;
   padding: 0 0 0 0.5rem;
-  background-color: var(--light-0);
   transition: background-color 0.3s ease;
 }
 
 .home-link:hover {
-  background-color: var(--light-100);
+  background-color: var(--button-hover-bg-color);
 }
 
 .home-link > svg {
@@ -44,7 +43,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: start;
-  fill: var(--dark-200);
+  fill: var(--text-color);
 }
 
 nav > ul {
@@ -72,7 +71,7 @@ nav > ul > li > a {
   align-items: center;
   height: 100%;
   width: 100%;
-  color: var(--dark-200);
+  color: var(--text-color);
   text-decoration: none;
   font-size: var(--font-size-sm);
   font-weight: 500;
@@ -81,14 +80,14 @@ nav > ul > li > a {
 }
 
 nav > ul > li > a:hover {
-  background-color: var(--light-100);
+  background-color: var(--button-hover-bg-color);
 }
 
 nav > ul > li > a.cta {
-  background-color: var(--dark-200);
-  color: white;
+  background-color: var(--button-accent-bg-color);
+  color: var(--button-accent-color);
 }
 
 nav > ul > li > a.cta:hover {
-  background-color: var(--dark-300);
+  background-color: var(--button-accent-hover-bg-color);
 }

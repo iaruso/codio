@@ -28,7 +28,7 @@
   font-size: 1.5rem;
   font-family: 'GilmerBold', sans-serif;
   letter-spacing: -0.066rem;
-  color: var(--dark-200);
+  color: var(--text-color);
   margin: 0;
   line-height: 1;
   text-align: center;
@@ -114,7 +114,7 @@
 }
 
 .work-content-row-item:hover .work-content-row-item-details {
-  background-color: var(--light-100);
+  background-color: var(--button-hover-bg-color);
 }
 
 .work-content-row-item:last-child{
@@ -127,13 +127,13 @@
   grid-template-columns: auto 6.875rem;
   grid-template-rows: 1fr;
   height: calc(3.4375rem / 2);
-  background-color: var(--light-0);
+  background-color: var(--button-bg-color);
   transition: background-color 0.3s ease;
 }
 
 .work-content-row-item-details h3 {
   font-size: var(--font-size-sm);
-  color: var(--dark-300);
+  color: var(--description-color);
   margin: 0;
   font-weight: 600;
   height: 100%;
@@ -150,7 +150,7 @@
   align-items: center;
   justify-content: end;
   padding: 0 0.5rem;
-  color: var(--dark-400);
+  color: var(--detail-color);
   font-size: var(--font-size-sm);
   border-left: dashed var(--border-width) var(--border-color);
 }

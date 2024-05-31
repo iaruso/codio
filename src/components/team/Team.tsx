@@ -59,7 +59,7 @@ const ContainerTeam: React.FC = () => {
       setTimeout(() => {
         lastBrand.style.marginLeft = '0px';
         setIsSliding(false);
-      }, 600);
+      }, 200);
     }
   };
 

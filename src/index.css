@@ -1,7 +1,7 @@
 :root {
   font-family: 'Radio Canada Big', 'Roboto', sans-serif;
   font-optical-sizing: auto;
-  font-size: calc(16px + (24 - 16) * (100vw - 1080px) / (1920 - 1080));
+  font-size: calc(20px + (24 - 20) * (100vw - 1080px) / (1920 - 1080));
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -30,20 +30,99 @@
   --font-size-md: 0.75rem;
   --font-size-sm: 0.625rem;
   --font-size-xs: 0.5rem;
-
-  --border-color: var(--dark-800);
   --border-width: 1px;
 
   --nav-height: calc(3.4375rem / 2);
   --offset: calc(var(--nav-height) + var(--border-width));
 }
 
+div#root.light {
+  --bg-color: var(--light-0);
+  --canvas-color: var(--dark-1000);
+  --canvas-hover-color: var(--dark-800);
+  --border-color: var(--dark-800);
+  --text-color: var(--dark-200);
+  --description-color: var(--dark-300);
+  --detail-color: var(--dark-400);
+  --accent-color: var(--light-0);
+  --button-bg-color: var(--light-0);
+  --button-hover-bg-color: var(--light-100);
+  --button-active-bg-color: var(--light-400);
+  --button-accent-color: var(--light-0);
+  --button-accent-bg-color: var(--dark-200);
+  --button-accent-hover-bg-color: var(--dark-300);
+  --icon-color: var(--dark-400);
+  --icon-clear-color: var(--dark-800);
+  --icon-clear-hover-color: var(--dark-500);
+
+  --banner-bg-color: var(--light-100);
+  --banner-button-bg-color: var(--light-100);
+  --banner-button-hover-bg-color: var(--light-400);
+  --banner-icon-color: var(--dark-400);
+
+  --selection-color: var(--light-100);
+  --selection-bg-color: var(--dark-200);
+
+  --scroll-thumb-color: var(--light-400);
+}
+
+div#root.dark {
+  --bg-color: var(--dark-100);
+  --canvas-color: var(--dark-300);
+  --canvas-hover-color: var(--dark-600);
+  --border-color: var(--dark-400);
+  --text-color: var(--dark-1000);
+  --description-color: var(--dark-900);
+  --detail-color: var(--dark-700);
+  --accent-color: var(--dark-600);
+  --button-bg-color: var(--dark-100);
+  --button-hover-bg-color: var(--dark-200);
+  --button-active-bg-color: var(--dark-300);
+  --button-accent-color: var(--light-0);
+  --button-accent-bg-color: var(--dark-400);
+  --button-accent-hover-bg-color: var(--dark-600);
+  --icon-color: var(--light-400);
+  --icon-clear-color: var(--dark-700);
+  --icon-clear-hover-color: var(--dark-900);
+
+  --banner-bg-color: var(--dark-200);
+  --banner-button-bg-color: var(--dark-200);
+  --banner-button-hover-bg-color: var(--dark-300);
+  --banner-icon-color: var(--dark-600);
+
+  --selection-color: var(--dark-100);
+  --selection-bg-color: var(--light-200);
+
+  --scroll-thumb-color: var(--dark-400);
+}
+
 * {
   box-sizing: border-box;
 }
 
+.app {
+  background-color: transparent;
+}
+
 body {
   margin: 0;
+}
+
+#root {
+  position: relative;
+}
+
+.page-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--bg-color);
+}
+
+.app {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
 }
 
 @font-face {
@@ -54,6 +133,52 @@ body {
 }
 
 ::-moz-selection, ::selection {
-  color: var(--light-100);
-  background: var(--dark-200);
+  color: var(--selection-color);
+  background: var(--selection-bg-color);
 }
+
+.opacity-box { /* GSAP not so accurate for some reason */
+  background-color: var(--bg-color);
+  opacity: 0;
+  height: 100dvh;
+  width: 100dvw;
+  position: fixed;
+  inset: 0;
+  z-index: 99999999999;
+  pointer-events: none;
+}
+
+/* Scrollbar styles */
+/* WebKit (Chrome, Safari, etc.) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+}
+
+/* Firefox */
+* {
+  scrollbar-color: var(--scroll-thumb-color) var(--bg-color);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+[data-color-scheme="dark"] {
+  color-scheme: dark;
+}
+
+[data-color-scheme="light"] {
+  color-scheme: light;
+}
+
+/* Sizes */
+.col-16 { width: 55rem; } /* 880px */
+.col-14 { width: 45.9375rem; } /* 735px */
+.col-12 { width: 41.25rem; } /* 660px */
+.col-10 { width: 34.375rem; } /* 550px */
+.col-8 { width: 27.5rem; } /* 440px */
+.col-6 { width: 20.625rem; } /* 330px */
+.col-4 { width: 13.75rem; } /* 220px */
+.col-3 { width: 10.3125rem; } /* 165px */
+.col-2 { width: 6.875rem; } /* 110px */
+.col-1 { width: 3.4375rem; } /* 55px */
