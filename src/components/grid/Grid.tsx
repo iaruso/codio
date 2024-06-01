@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './Grid.css';
 
 type GridProps = {
@@ -6,6 +7,7 @@ type GridProps = {
 };
 
 const Grid: React.FC<GridProps> = ({ activeService }) => {
+  const { t } = useTranslation();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [value, setValue] = useState(50);
 
@@ -81,8 +83,8 @@ const Grid: React.FC<GridProps> = ({ activeService }) => {
             <pre className='symbol'>{`<`}</pre>
             <pre className='tag'>h1</pre>
             <pre className='symbol'>{`>`}</pre>
-            <pre className='text inactive'>How to center a div?</pre>
-            <pre className='text active'>Centering a div</pre>
+            <pre className='text inactive'>{t('services.development.grid.title_1')}</pre>
+            <pre className='text active'>{t('services.development.grid.title_2')}</pre>
             <pre className='symbol'>{`</`}</pre>
             <pre className='tag'>h1</pre>
             <pre className='symbol'>{`>`}</pre>
@@ -91,8 +93,8 @@ const Grid: React.FC<GridProps> = ({ activeService }) => {
             <pre className='symbol'>{`<`}</pre>
             <pre className='tag'>p</pre>
             <pre className='symbol'>{`>`}</pre>
-            <pre className='text inactive'>There are many ways ...</pre>
-            <pre className='text active'>Using flex</pre>
+            <pre className='text inactive'>{t('services.development.grid.subtitle_1')}</pre>
+            <pre className='text active'>{t('services.development.grid.subtitle_2')}</pre>
             <pre className='symbol'>{`</`}</pre>
             <pre className='tag'>p</pre>
             <pre className='symbol'>{`>`}</pre>

@@ -1,5 +1,5 @@
 import './Team.css';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect} from 'react';
 import { useTranslation } from 'react-i18next';
 import Icon from '../icons/Icon';
 import teamData from '../../../public/team.json'
@@ -29,7 +29,19 @@ const TeamMember: React.FC<TeamMemberProps> = React.memo(({ name, position, imag
 const ContainerTeam: React.FC = () => {
   const { t } = useTranslation();
   const [isSliding, setIsSliding] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1080);
   const sliderRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 1080);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleSlide = (direction: 'prev' | 'next') => {
     if (isSliding || !sliderRef.current) return;
@@ -37,13 +49,16 @@ const ContainerTeam: React.FC = () => {
 
     const slider = sliderRef.current;
     const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-    const marginLeftValue = 10.3125 * rootFontSize;
+
+    const marginLeftValue = isSmallScreen
+      ? `calc((100vw - (100vw / 8)) / 2)`
+      : `${10.3125 * rootFontSize}px`;
 
     if (direction === 'next') {
       slider.classList.remove('sliding-left');
       slider.classList.add('sliding-right');
       const brand = slider.getElementsByClassName('team-members-item')[0] as HTMLElement;
-      brand.style.marginLeft = `-${marginLeftValue}px`;
+      brand.style.marginLeft = `-${marginLeftValue}`;
       setTimeout(() => {
         slider.appendChild(brand);
         brand.style.marginLeft = '0px';
@@ -55,7 +70,7 @@ const ContainerTeam: React.FC = () => {
       const brands = slider.getElementsByClassName('team-members-item');
       const lastBrand = brands[brands.length - 1] as HTMLElement;
       slider.insertBefore(lastBrand, brands[0]);
-      lastBrand.style.marginLeft = `-${marginLeftValue}px`;
+      lastBrand.style.marginLeft = `-${marginLeftValue}`;
       setTimeout(() => {
         lastBrand.style.marginLeft = '0px';
         setIsSliding(false);

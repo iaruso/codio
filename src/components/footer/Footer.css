@@ -139,3 +139,39 @@ footer {
 .react-dropdown-select-item-selected {
   background-color: var(--button-active-bg-color) !important;
 }
+
+@media screen and (max-width: 1080px) {
+  footer {
+    width: calc(100% - var(--border-width)) !important;
+  }
+  .footer-container {
+    border-bottom: dashed var(--border-width) var(--border-color);
+    height: calc(3.4375rem / 1.5);
+  }
+  .theme-toggle svg, .footer-social a svg {
+    min-width: 0.75rem;
+  }
+  .footer-container > div:first-child, .react-dropdown-select-dropdown {
+    width: calc(100dvw / 4) !important;
+  }
+  .react-dropdown-select-dropdown {
+    border-right: dashed var(--border-width) var(--border-color) !important;
+    height: auto !important;
+  }
+  .react-dropdown-select-dropdown {
+    max-height: none !important;
+    bottom: calc(3.4375rem / 1.5 + var(--border-width)) !important;
+  }
+  .react-dropdown-select-item {
+    min-height: calc(3.4375rem / 1.5) !important;
+  }
+  footer p {
+    display: none;
+  }
+  .footer-social {
+    margin-left: auto;
+  }
+  .theme-toggle, .footer-social a {
+    width: calc(3.4375rem / 1.5);
+  }
+}

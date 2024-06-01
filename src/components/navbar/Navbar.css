@@ -91,3 +91,76 @@ nav > ul > li > a.cta {
 nav > ul > li > a.cta:hover {
   background-color: var(--button-accent-hover-bg-color);
 }
+
+.menu-toggle {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  height: 100%;
+  width: calc(100% / 4) !important;
+  background-color: var(--button-bg-color);
+  color: var(--text-color);
+  cursor: pointer;
+  border: none;
+  border-left: dashed var(--border-width) var(--border-color);
+  font-size: var(--font-size-sm);
+  font-family: 'Radio Canada Big', 'Roboto', sans-serif;
+}
+
+.menu-toggle > svg {
+  min-width: 1rem;
+  width: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--icon-color);
+}
+
+@media screen and (max-width: 1080px) {
+  nav {
+    border-left: none;
+    position: relative;
+  }
+  nav .empty-block {
+    display: none;
+  }
+  .navbar-container {
+    width: calc(100% - var(--border-width)) !important;
+  }
+  .navbar-content {
+    border-top: dashed var(--border-width) var(--border-color);
+    border-left: dashed var(--border-width) var(--border-color);
+    height: calc(3.4375rem / 1.5);
+  }
+  .home-link {
+    width: calc(100% / 4) !important;
+  }
+  nav > ul {
+    display: none;
+  }
+  nav > ul.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(3.4375rem / 1.5 - var(--border-width));
+    width: 100%;
+    background-color: var(--bg-color);
+    height: calc(calc(100dvh - 3.4375rem / 1.5 - var(--border-width)));
+    border-top: dashed var(--border-width) var(--border-color);
+  }
+  nav > ul.open > li {
+    width: 100% !important;
+    min-height: calc(100% / 4);
+    background-color: var(--button-bg-color);
+    border-bottom: dashed var(--border-width) var(--border-color);
+    transition: height 0.3s ease;
+    border-right: none !important;
+  }
+  nav > ul.open > li a {
+    font-size: 1.5rem;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}

@@ -1,5 +1,10 @@
 export default {
   translations: {
+    head: {
+      title: 'cōdio - agência de desenvolvimento e design web',
+      description: 'Criando experiências online impactantes que ressoam com o seu público.',
+      keywords: 'desenvolvimento web, design web, seo, experiências online, codio'
+    },
     banner: {
       content: 'Este site é apenas para fins de demonstração.',
       close: 'Fechar',
@@ -9,6 +14,7 @@ export default {
       services: 'Serviços',
       team: 'Equipa',
       contact: 'Entrar em contacto',
+      menu: 'Menu'
     },
     intro: {
       title_1: 'Criando com cuidado',
@@ -31,7 +37,13 @@ export default {
       },
       development: {
         title: 'Desenvolvimento',
-        content: 'Desenvolvimento perfeito para dar vida à sua visão.'
+        content: 'Desenvolvimento perfeito para dar vida à sua visão.',
+        grid: {
+          title_1: 'Como centrar uma div?',
+          title_2: 'Centrando uma div',
+          subtitle_1: 'Existem muitas maneiras',
+          subtitle_2: 'Usando flexbox',
+        }
       },
       seo: {
         title: 'SEO',

@@ -216,3 +216,40 @@
   align-items: center;
   height: 100%;
 }
+
+@media screen and (max-width: 1080px) {
+  .team-container {
+    width: calc(100% - var(--border-width)) !important;
+  }
+  .team-content-area .team-prev-btn, .team-content-area .team-next-btn {
+    width: 0;
+    flex: 1;
+    border: none;
+  }
+  .team-prev-btn button, .team-next-btn button {
+    height: 100%;
+    border: none;
+    width: 100%;
+  }
+  .team-prev-btn button svg, .team-next-btn button svg {
+    min-width: 0.5rem;
+  }
+  .team-careers-area .empty-block {
+    display: none;
+  }
+  .team-members-container, .team-careers-area .col-12 {
+    width: calc(100dvw - 100dvw / 8) !important;
+    border-left: dashed var(--border-width) var(--border-color);
+    border-right: dashed var(--border-width) var(--border-color);
+  }
+  .team-content-area {
+    height: calc(calc(100dvw - 100dvw / 8) / 2 / calc(3 / 4)) !important;;
+  }
+  .team-members-item {
+    width: calc(calc(100dvw - 100dvw / 8) / 2) !important;
+    height: calc(calc(100dvw - 100dvw / 8) / 2 / calc(3 / 4)) !important;
+  }
+  .team-members.sliding-left .team-members-item:nth-child(2) {
+    animation: borderAnimation 0s ease;
+  }
+}

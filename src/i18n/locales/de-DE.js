@@ -1,5 +1,10 @@
 export default {
   translations: {
+    head: {
+      title: 'cōdio - Agentur für Webentwicklung und Design',
+      description: 'Erstellung beeindruckender Online-Erlebnisse, die bei Ihrem Publikum Anklang finden.',
+      keywords: 'Webentwicklung, Webdesign, SEO, Online-Erlebnisse, Codio'
+    },
     banner: {
       content: 'Diese Website dient nur Demonstrationszwecken.',
       close: 'Schließen',
@@ -9,6 +14,7 @@ export default {
       services: 'Dienstleistungen',
       team: 'Team',
       contact: 'Kontakt aufnehmen',
+      menu: 'Menü'
     },
     intro: {
       title_1: 'Sorgfältig gestalten',
@@ -31,7 +37,13 @@ export default {
       },
       development: {
         title: 'Entwicklung',
-        content: 'Nahtlose Entwicklung, um Ihre Vision zum Leben zu erwecken.'
+        content: 'Nahtlose Entwicklung, um Ihre Vision zum Leben zu erwecken.',
+        grid: {
+          title_1: 'Div zentrieren?',
+          title_2: 'Ein div zentrieren',
+          subtitle_1: 'Es gibt viele Wege',
+          subtitle_2: 'Mit flexbox',
+        }
       },
       seo: {
         title: 'SEO',

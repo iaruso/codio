@@ -73,3 +73,18 @@
 .companies-content-row-item.icon-sm svg {
   height: var(--font-size-lg);
 }
+
+@media screen and (max-width: 1080px) {
+  .companies-container {
+    width: calc(100% - var(--border-width));
+  }
+  .companies-content-row-item:nth-child(1) {
+    width: calc(100% / 4 + var(--border-width));
+  }
+  .companies-content-row-item svg {
+    height: var(--font-size-md);
+  }
+  .companies-content-row-item.icon-sm svg {
+    height: var(--font-size-sm);
+  }
+}

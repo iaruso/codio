@@ -129,17 +129,43 @@
   background-color: var(--icon-color);
 }
 
-.grid-canvas.design .frame {
+#root.light .grid-canvas.design .frame {
+  scale: 4;
+  opacity: 0.6;
+  animation: frameAnimationLight 3s infinite 0.3s ease-in;
+}
+
+#root.dark .grid-canvas.design .frame {
   scale: 4;
   opacity: 0.3;
-  animation: frameAnimation 3s infinite 0.3s ease-in;
+  animation: frameAnimationDark 3s infinite 0.3s ease-in;
 }
 
-#root.light .grid-canvas.design .frame {
-  opacity: 0.6;
+@keyframes frameAnimationLight {
+  0% {
+    background-color: var(--canvas-color);
+  }
+  16% {
+    background-color: #e57373;
+  }
+  33% {
+    background-color: #ffb74d;
+  }
+  50% {
+    background-color: #fff176;
+  }
+  66% {
+    background-color: #aed581;
+  }
+  83% {
+    background-color: #81c784;
+  }
+  100% {
+    background-color: var(--canvas-color);
+  }
 }
 
-@keyframes frameAnimation {
+@keyframes frameAnimationDark {
   0% {
     background-color: var(--canvas-color);
   }
@@ -183,17 +209,50 @@
   background-color: var(--icon-color);
 }
 
-.grid-canvas.design .circle {
-  opacity: 0.6;
-  animation: circleAnimation 3s infinite 0.3s ease-in;
+#root.light .grid-canvas.design .circle {
+  opacity: 0.9;
+  animation: circleAnimationLight 3s infinite 0.3s ease-in;
   will-change: scale, transform;
 }
 
-#root.light .grid-canvas.design .circle {
-  opacity: 0.9;
+#root.dark .grid-canvas.design .circle {
+  opacity: 0.6;
+  animation: circleAnimationDark 3s infinite 0.3s ease-in;
+  will-change: scale, transform;
 }
 
-@keyframes circleAnimation {
+@keyframes circleAnimationLight {
+  0% {
+    transform: scale(1) translate(0, 0);
+    background-color: var(--canvas-color);
+  }
+  16% {
+    transform: scale(1.2) translate(-1rem, -1rem);
+    background-color: #e57373;
+  }
+  33% {
+    transform: scale(1.2) translate(1rem, -1rem);
+    background-color: #ffb74d;
+  }
+  50% {
+    transform: scale(1.2) translate(1rem, 1rem);
+    background-color: #fff176;
+  }
+  66% {
+    transform: scale(1.2) translate(-1rem, 1rem);
+    background-color: #aed581;
+  }
+  83% {
+    transform: scale(1.2) translate(0, 0);
+    background-color: #81c784;
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+    background-color: var(--canvas-color);
+  }
+}
+
+@keyframes circleAnimationDark {
   0% {
     transform: scale(1) translate(0, 0);
     background-color: var(--canvas-color);
@@ -530,6 +589,26 @@
   100% {
     transform: rotate(346deg);
     background: #00CC66;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .grid-canvas:hover .bg {
+    background-color: var(--canvas-color) !important;
+  }
+  .grid-design, .grid-development, .grid-seo, .glow-circle {
+    display: none;
+  }
+  .grid-canvas.design .grid-design {
+    display: flex;
+  }
+  .grid-canvas.development .grid-development {
+    display: flex;
+    left: 0;
+  }
+  .grid-canvas.seo .grid-seo {
+    display: flex;
+    left: 0;
   }
 }
 

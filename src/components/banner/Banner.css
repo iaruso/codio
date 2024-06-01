@@ -23,6 +23,7 @@
   padding-left: 0.5rem;
   font-size: var(--font-size-xs);
   color: var(--detail-color);
+  margin: 0;
 }
 
 .banner-content button {
@@ -48,4 +49,29 @@
 
 .banner-content button:hover {
   background-color: var(--banner-button-hover-bg-color);
+}
+
+@media screen and (max-width: 1080px) {
+  .banner-container {
+    height: calc(3.4375rem / 1.5);
+    border-left: dashed var(--border-width) var(--border-color);
+    border-top: dashed var(--border-width) var(--border-color);
+    border-bottom: none;
+  }
+  .banner-content {
+    border-left: none;
+  }
+  .banner-content button {
+    width: calc(100% / 4) !important;
+  }
+  .banner-content p {
+    max-width: calc(100% / 4 * 3) !important;
+  }
+  .banner-content p, .banner-content button {
+    font-size: var(--font-size-sm);
+  }
+  .banner-content button svg {
+    min-width: 1rem;
+    width: 1rem;
+  }
 }

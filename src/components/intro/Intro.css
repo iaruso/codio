@@ -140,3 +140,22 @@
 .button-area-overlay:hover {
   box-shadow: none;
 }
+
+@media screen and (max-width: 1080px) {
+  main > .empty-block {
+    display: none;
+  }
+  .intro-container {
+    width: calc(100% - var(--border-width));
+  }
+  .intro-content {
+    border: none;
+    width: auto !important;
+  }
+  .intro-content h1 {
+    font-size: 1.75rem;
+  }
+  .intro-content .cta {
+    width: calc(100dvw / 3);
+  }
+}

@@ -1,5 +1,10 @@
 export default {
   translations: {
+    head: {
+      title: 'cōdio - web development & design agency',
+      description: 'Crafting impactful online experiences that resonate with your audience.',
+      keywords: 'web development, web design, seo, online experiences, codio'
+    },
     banner: {
       content: 'This website is only for demonstration purposes.',
       close: 'Close',
@@ -9,6 +14,7 @@ export default {
       services: 'Services',
       team: 'Team',
       contact: 'Get in touch',
+      menu: 'Menu'
     },
     intro: {
       title_1: 'Crafting with care',
@@ -31,12 +37,18 @@ export default {
       },
       development: {
         title: 'Development',
-        content: 'Seamless development to bring your vision to life.'
+        content: 'Seamless development to bring your vision to life.',
+        grid: {
+          title_1: 'How to center a div?',
+          title_2: 'Centering a div',
+          subtitle_1: 'There are many ways',
+          subtitle_2: 'Using flexbox',
+        }
       },
       seo: {
         title: 'SEO',
         content: 'Unlocking organic growth through strategic SEO optimization.'
-      },
+      }
     },
     team: {
       title: 'Our team',

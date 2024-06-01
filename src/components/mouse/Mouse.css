@@ -17,3 +17,9 @@
   top: calc(50% - var(--border-width));
   border-top: dashed var(--border-width) var(--border-color);
 }
+
+@media screen and (max-width: 1080px) {
+  .mouse-area {
+    display: none;
+  }
+}

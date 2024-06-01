@@ -7,7 +7,6 @@ const MouseOverlay: React.FC = () => {
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
-      console.log(`Mouse X: ${event.clientX}, Mouse Y: ${event.clientY}`);
       if (verticalRef.current) {
         verticalRef.current.style.left = `${event.clientX}px`;
       }

@@ -4,7 +4,7 @@ import Icon from '../icons/Icon';
 
 const Companies: React.FC = () => {
   return (
-    <div className='companies-container'>
+    <section className='companies-container'>
       <div className='companies-content col-16'>
         <div className='companies-content-row'>
           <a className='companies-content-row-item col-4' href='https://www.logotouse.com/' target='_blank'>
@@ -35,7 +35,7 @@ const Companies: React.FC = () => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
