@@ -83,8 +83,10 @@ export default {
           fr: 'French',
           de: 'German',
           ru: 'Russian'
-        }
+        },
+        aria_label: 'Change language'
       },
+      theme: 'Change theme',
       content: '© 2024 Codio. All rights reserved.'
     }
   }

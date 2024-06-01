@@ -129,6 +129,9 @@
   .services-content-area-grid {
     width: calc(100dvw - 100dvw / 8) !important;
   }
+  .services-content-area-grid-container-description-area p {
+    text-align: center;
+  }
   .services-content-area-grid-options-item,
   .services-content-area-grid .empty-block {
     flex: 1;

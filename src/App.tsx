@@ -41,6 +41,7 @@ function App() {
           <title>{t('head.title')}</title>
           <meta name='description' content={t('head.description')} />
           <meta name='keywords' content={t('head.keywords')} />
+          <meta name='theme-color' content={theme === 'light' ? '#ffffff' : '#121212'} />
         </Helmet>
       </HelmetProvider>
       <div className='opacity-box'></div>

@@ -140,6 +140,10 @@ footer {
   background-color: var(--button-active-bg-color) !important;
 }
 
+.react-dropdown-select-input {
+  display: none !important;
+}
+
 @media screen and (max-width: 1080px) {
   footer {
     width: calc(100% - var(--border-width)) !important;

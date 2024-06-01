@@ -242,6 +242,9 @@
     border-left: dashed var(--border-width) var(--border-color);
     border-right: dashed var(--border-width) var(--border-color);
   }
+  .team-careers-area p {
+    padding: 0.5rem 1rem;
+  }
   .team-content-area {
     height: calc(calc(100dvw - 100dvw / 8) / 2 / calc(3 / 4)) !important;;
   }

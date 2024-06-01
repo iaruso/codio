@@ -44,11 +44,11 @@
 }
 
 #root.light .grid-canvas .bg {
-  background-image: url('./grid_pattern.png');
+  background-image: url('../grid_pattern.png');
 }
 
 #root.dark .grid-canvas .bg {
-  background-image: url('./grid_pattern_dark.png');
+  background-image: url('../grid_pattern_dark.png');
 }
 
 @keyframes reveal {

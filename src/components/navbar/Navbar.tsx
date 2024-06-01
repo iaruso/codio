@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
       <Banner />
       <div className='navbar-content'>
         <nav className='col-16'>
-          <ScrollLink href='#root' to='root' smooth={true} duration={400} className='home-link col-2'>
+          <ScrollLink href='#root' to='root' smooth={true} duration={400} className='home-link col-2' aria-label='cōdio'>
             <Icon path='Logo' />
           </ScrollLink>
           <div className='empty-block col-6'></div>

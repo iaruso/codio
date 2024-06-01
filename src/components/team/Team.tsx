@@ -16,7 +16,7 @@ const TeamMember: React.FC<TeamMemberProps> = React.memo(({ name, position, imag
   return (
     <a className='team-members-item col-3' href={reference} target='_blank'>
       <div className='team-members-item-image'>
-        <img src={'./'  + image + '.jpg'} alt={t(name) + ' - ' + t(position)} />
+        <img src={'/'  + image + '.jpg'} alt={t(name) + ' - ' + t(position)}/>
       </div>
       <div className='team-members-item-info'>
         <h3>{t(name)}</h3>
@@ -86,7 +86,7 @@ const ContainerTeam: React.FC = () => {
         </div>
         <div className='team-content-area'>
           <div className='team-prev-btn col-2'>
-            <button onClick={() => handleSlide('prev')} disabled={isSliding}>
+            <button onClick={() => handleSlide('prev')} disabled={isSliding} id='prev' aria-label='<'>
               <Icon path='Prev' />
             </button>
           </div>
@@ -98,7 +98,7 @@ const ContainerTeam: React.FC = () => {
             </div>
           </div>
           <div className='team-next-btn col-2'>
-            <button onClick={() => handleSlide('next')} disabled={isSliding}>
+            <button onClick={() => handleSlide('next')} disabled={isSliding} id='next' aria-label='>'>
               <Icon path='Next' />
             </button>
           </div>

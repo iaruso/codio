@@ -68,22 +68,23 @@ const Footer: React.FC<FooterProps> = ({toggleTheme, theme}) => {
           dropdownPosition='top'
           searchable={false}
           onChange={handleSelectChange}
+          aria-label={t(`footer.language.options.${activeLanguage}`)}
         />
-        <button className='theme-toggle' onClick={toggleTheme}>
+        <button className='theme-toggle' onClick={toggleTheme} id='theme-toggle' aria-label={t('footer.theme')}>
           {theme === 'dark' ? <Icon path='Dark' /> : <Icon path='Light' />}
         </button>
         <p>{t('footer.content')}</p>
         <div className='footer-social'>
-          <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'>
+          <a href='https://www.instagram.com/' target='_blank' rel='noreferrer' aria-label='Instagram'>
             <Icon path='Instagram' />
           </a>
-          <a href='https://www.linkedin.com/' target='_blank' rel='noreferrer'>
+          <a href='https://www.linkedin.com/' target='_blank' rel='noreferrer' aria-label='LinkedIn'>
             <Icon path='LinkedIn' />
           </a>
-          <a href='https://www.twitter.com/' target='_blank' rel='noreferrer'>
+          <a href='https://www.twitter.com/' target='_blank' rel='noreferrer' aria-label='Twitter'>
             <Icon path='Twitter' />
           </a>
-          <a href='https://www.youtube.com/' target='_blank' rel='noreferrer'>
+          <a href='https://www.youtube.com/' target='_blank' rel='noreferrer' aria-label='Youtube'>
             <Icon path='Youtube' />
           </a>
         </div>
