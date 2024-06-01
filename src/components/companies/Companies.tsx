@@ -1,6 +1,6 @@
 import './Companies.css';
 import React from 'react';
-import Icon from '../icons/Icon';
+import Icon from '../icons/Icon.tsx';
 
 const Companies: React.FC = () => {
   return (
@@ -8,30 +8,30 @@ const Companies: React.FC = () => {
       <div className='companies-content col-16'>
         <div className='companies-content-row'>
           <a className='companies-content-row-item col-4' href='https://www.logotouse.com/' target='_blank'>
-            <Icon path='companies/Cactus' />
+            <Icon path='Cactus' />
           </a>
           <a className='companies-content-row-item col-4' href='https://www.logotouse.com/' target='_blank'>
-            <Icon path='companies/Flash' />
+            <Icon path='Flash' />
           </a>
           <a className='companies-content-row-item col-4 icon-sm' href='https://www.logotouse.com/' target='_blank'>
-            <Icon path='companies/Hitech' />
+            <Icon path='Hitech' />
           </a>
           <a className='companies-content-row-item col-4' href='https://www.logotouse.com/' target='_blank'>
-            <Icon path='companies/Iceberg' />
+            <Icon path='Iceberg' />
           </a>
         </div>
         <div className='companies-content-row'>
           <a className='companies-content-row-item col-4' href='https://www.logotouse.com/' target='_blank'>
-            <Icon path='companies/Luminous' />
+            <Icon path='Luminous' />
           </a>
           <a className='companies-content-row-item col-4 icon-sm' href='https://www.logotouse.com/' target='_blank'>
-            <Icon path='companies/Monaco' />
+            <Icon path='Monaco' />
           </a>
           <a className='companies-content-row-item col-4' href='https://www.logotouse.com/' target='_blank'>
-            <Icon path='companies/Pinpoint' />  
+            <Icon path='Pinpoint' />  
           </a>
           <a className='companies-content-row-item col-4 icon-sm' href='https://www.logotouse.com/' target='_blank'>
-            <Icon path='companies/Snapshot' />
+            <Icon path='Snapshot' />
           </a>
         </div>
       </div>

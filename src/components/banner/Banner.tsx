@@ -1,7 +1,7 @@
 import './Banner.css';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import Icon from '../icons/Icon';
+import Icon from '../icons/Icon.tsx';
 
 const Banner: React.FC = () => {
   const { t } = useTranslation();

@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
-import Icon from '../icons/Icon';
+import Icon from '../icons/Icon.tsx';
 import './Navbar.css';
 
 function debounce<T extends (...args: any[]) => void>(func: T, wait: number) {

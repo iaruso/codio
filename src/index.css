@@ -125,13 +125,6 @@ body {
   width: 100%;
 }
 
-@font-face {
-  font-family: 'GilmerBold';
-  src: url('./GilmerBold.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
 ::-moz-selection, ::selection {
   color: var(--selection-color);
   background: var(--selection-bg-color);

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Select from 'react-dropdown-select';
 import gsap from 'gsap';
 import { useTranslation } from 'react-i18next';
-import Icon from '../icons/Icon';
+import Icon from '../icons/Icon.tsx';
 
 interface FooterProps {
   toggleTheme: () => void;
@@ -75,16 +75,16 @@ const Footer: React.FC<FooterProps> = ({toggleTheme, theme}) => {
         <p>{t('footer.content')}</p>
         <div className='footer-social'>
           <a href='https://www.instagram.com/' target='_blank' rel='noreferrer'>
-            <Icon path='social/Instagram' />
+            <Icon path='Instagram' />
           </a>
           <a href='https://www.linkedin.com/' target='_blank' rel='noreferrer'>
-            <Icon path='social/LinkedIn' />
+            <Icon path='LinkedIn' />
           </a>
           <a href='https://www.twitter.com/' target='_blank' rel='noreferrer'>
-            <Icon path='social/Twitter' />
+            <Icon path='Twitter' />
           </a>
           <a href='https://www.youtube.com/' target='_blank' rel='noreferrer'>
-            <Icon path='social/Youtube' />
+            <Icon path='Youtube' />
           </a>
         </div>
       </div>

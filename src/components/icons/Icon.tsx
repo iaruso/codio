@@ -7,7 +7,7 @@ interface IconProps {
 
 const Icon: React.FC<IconProps> = ({ path, className }) => {
   const IconComponent = lazy<ComponentType<{ className?: string }>>(() =>
-    import(`../../components/icons/${path}`).then(module => ({ default: module.default }))
+    import(`../../components/icons/${path}.tsx`).then(module => ({ default: module.default }))
   );
 
   return (

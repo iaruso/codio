@@ -1,7 +1,7 @@
 import './Team.css';
 import React, { useState, useRef, useEffect} from 'react';
 import { useTranslation } from 'react-i18next';
-import Icon from '../icons/Icon';
+import Icon from '../icons/Icon.tsx';
 import teamData from '../../../public/team.json'
 
 interface TeamMemberProps {

@@ -79,7 +79,8 @@
 
 .contact-link h2 {
   font-size: 1.5rem;
-  font-family: 'GilmerBold', sans-serif;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 600;
   letter-spacing: -0.066rem;
   color: var(--text-color);
   margin: 0;
