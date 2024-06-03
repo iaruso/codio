@@ -406,7 +406,7 @@
   align-items: center;
   z-index: 3;
   font-size: var(--font-size-xl);
-  font-family: '', sans-serif;
+  font-family: 'League Spartan', sans-serif;
   font-variant-numeric: tabular-nums;
   pointer-events: none;
 }
