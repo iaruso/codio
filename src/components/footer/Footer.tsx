@@ -15,18 +15,18 @@ const Footer: React.FC<FooterProps> = ({toggleTheme, theme}) => {
   const [activeLanguage, setActiveLanguage] = useState(i18n.language.split('-')[0]);
 
   useEffect(() => {
-    const storedLanguage = localStorage.getItem('i18nextLng') || 'en-US';
+    const storedLanguage = localStorage.getItem('i18nextLng') || 'en';
     i18n.changeLanguage(storedLanguage);
     setActiveLanguage(storedLanguage.split('-')[0]);
   }, [i18n.language, i18n]);
 
   const languages: { [key: string]: string } = {
-    'en': 'en-US',
-    'pt': 'pt-PT',
-    'es': 'es-ES',
-    'fr': 'fr-FR',
-    'de': 'de-DE',
-    'ru': 'ru-RU',
+    'en': 'en',
+    'pt': 'pt',
+    'es': 'es',
+    'fr': 'fr',
+    'de': 'de',
+    'ru': 'ru',
   };
 
   const handleSelectChange = (selectedOptions: { value: string; }[]) => {

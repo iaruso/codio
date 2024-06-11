@@ -1,15 +1,15 @@
-import englishTranslations from './en-US'
-import portugueseTranslations from './pt-PT'
-import spanishTranslations from './es-ES'
-import frenchTranslations from './fr-FR'
-import germanTranslations from './de-DE'
-import russianTranslations from './ru-RU'
+import englishTranslations from './en'
+import portugueseTranslations from './pt'
+import spanishTranslations from './es'
+import frenchTranslations from './fr'
+import germanTranslations from './de'
+import russianTranslations from './ru'
 
 export default {
-  'en-US': englishTranslations,
-  'pt-PT': portugueseTranslations,
-  'es-ES': spanishTranslations,
-  'fr-FR': frenchTranslations,
-  'de-DE': germanTranslations,
-  'ru-RU': russianTranslations,
+  'en': englishTranslations,
+  'pt': portugueseTranslations,
+  'es': spanishTranslations,
+  'fr': frenchTranslations,
+  'de': germanTranslations,
+  'ru': russianTranslations,
 }
